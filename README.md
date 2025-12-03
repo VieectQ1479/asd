@@ -1,29 +1,26 @@
 # Symbolic and Algebraic Reasoning in Petri Nets
 
 **Trường:** Đại học Bách Khoa TP.HCM (HCMUT)  
+
 **Môn học:** Mô hình hóa Toán học (Mathematical Modeling - CO2011)  
+
 **Học kỳ:** 251 (Năm học 2025 - 2026)  
+
 **Đề tài:** Symbolic and Algebraic Reasoning in Petri Nets
+
+**Nhóm sinh viên thực hiện:** Nhóm 41 
+
+
 
 ---
 
 ## 1. Giới thiệu
-Dự án này là bài tập lớn nhằm xây dựng công cụ phân tích **Mạng Petri 1-safe** (1-safe Petri nets). Ứng dụng được viết bằng ngôn ngữ C++ để tối ưu hóa hiệu năng, kết hợp các kỹ thuật:
+Dự án xây dựng công cụ phân tích **Mạng Petri 1-safe** (1-safe Petri nets) này được viết bằng ngôn ngữ C++ để tối ưu hóa hiệu năng và kết hợp các kỹ thuật:
 * **Explicit Search:** Duyệt không gian trạng thái bằng BFS.
 * **Symbolic Search:** Sử dụng BDD (Binary Decision Diagrams) để biểu diễn không gian trạng thái lớn.
 * **Deadlock Detection:** Phát hiện tắc nghẽn bằng quy hoạch tuyến tính (ILP).
 
-## 2. Thành viên nhóm (Nhóm 41)
-
-| STT | Họ và tên | MSSV | Vai trò |
-|:---:|:---|:---:|
-| 1 | Lê Tuấn Khang | 2411443|
-| 2 | Nguyễn Quốc Việt | 2413952|
-| 3 | Ngô Anh Khôi | 2411694|
-| 4 | Nguyễn Lê Anh Xuân | 2420013|
-| 5 | Dương Quang Minh | 2412034 |
-
-## 3. Yêu cầu & Cài đặt (Prerequisites & Setup)
+## 2. Yêu cầu & Cài đặt (Prerequisites & Setup)
 
 Dự án sử dụng **CMake** để quản lý quá trình biên dịch.
 
@@ -31,7 +28,7 @@ Dự án sử dụng **CMake** để quản lý quá trình biên dịch.
 > Mã nguồn dự án đã bao gồm sẵn mã nguồn thư viện **BuDDy** (trong thư mục `buddy/`) và thư viện **GLPK** (trong thư mục `GLPK/`). 
 > **Không đổi tên hoặc di chuyển** các thư mục này để đảm bảo cấu hình CMake hoạt động chính xác.
 
-## 4. Hướng dẫn biên dịch (Build Instructions)
+## 3. Hướng dẫn biên dịch (Build Instructions)
 
 ### Bước 1: Tạo thư mục build và biên dịch
 Mở terminal tại thư mục gốc của dự án và chạy lần lượt các lệnh sau:
@@ -47,13 +44,16 @@ Quá trình này sẽ biên dịch mã nguồn và tự động copy các file i
 
 ### Bước 2: Chạy chương trình
 Sau khi biên dịch thành công, file thực thi PetriNetApp sẽ xuất hiện trong thư mục build.
-Đối với Windows:
-# Chạy với file input mặc định
-.\Debug\PetriNetApp.exe simple_lbs-5.pnml
-Đối với Linux / macOS:
-./PetriNetApp simple_lbs-5.pnml
 
-## 5. Các chức năng đã thực hiện trong dự án
+Đối với Windows:
+```bash
+.\Debug\PetriNetApp.exe simple_lbs-5.pnml
+```
+Đối với Linux / macOS:
+```bash
+./PetriNetApp simple_lbs-5.pnml
+```
+## 4. Các chức năng đã thực hiện trong dự án
 Task 1 - Parse PNML
 
 Đọc file chuẩn PNML (Petri Net Markup Language).
