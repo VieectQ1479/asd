@@ -47,11 +47,11 @@ Sau khi biên dịch thành công, file thực thi PetriNetApp sẽ xuất hiệ
 
 Đối với Windows:
 ```bash
-.\Release\PetriNetApp.exe simple_lbs-5.pnml
+.\Release\PetriNetApp.exe simple_lbs-2.pnml
 ```
 Đối với Linux / macOS:
 ```bash
-./PetriNetApp simple_lbs-5.pnml
+./PetriNetApp simple_lbs-2.pnml
 ```
 ## 4. Các chức năng đã thực hiện trong dự án
 ### Task 1 - Parse PNML
