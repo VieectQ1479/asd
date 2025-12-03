@@ -25,7 +25,7 @@ Dự án xây dựng công cụ phân tích **Mạng Petri 1-safe** (1-safe Petr
 Dự án sử dụng **CMake** để quản lý quá trình biên dịch.
 
 > **⚠️ Lưu ý quan trọng:**
-> Mã nguồn dự án đã bao gồm sẵn mã nguồn thư viện **BuDDy** (trong thư mục `buddy/`) và thư viện **GLPK** (trong thư mục `GLPK/`). 
+> Mã nguồn dự án đã bao gồm sẵn mã nguồn thư viện **BuDDy** (trong thư mục `src/buddy/`) và thư viện **GLPK** (trong thư mục `src/GLPK/`). 
 > **Không đổi tên hoặc di chuyển** các thư mục này để đảm bảo cấu hình CMake hoạt động chính xác.
 
 ## 3. Hướng dẫn biên dịch (Build Instructions)
@@ -37,7 +37,7 @@ Mở terminal tại thư mục gốc của dự án và chạy lần lượt cá
 mkdir build
 cd build
 cmake ..
-cmake --build .
+cmake --build . --config Release
 ```
 
 Quá trình này sẽ biên dịch mã nguồn và tự động copy các file input mẫu (.pnml) vào thư mục build.
@@ -47,7 +47,7 @@ Sau khi biên dịch thành công, file thực thi PetriNetApp sẽ xuất hiệ
 
 Đối với Windows:
 ```bash
-.\Debug\PetriNetApp.exe simple_lbs-5.pnml
+.\Release\PetriNetApp.exe simple_lbs-5.pnml
 ```
 Đối với Linux / macOS:
 ```bash
