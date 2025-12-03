@@ -15,7 +15,7 @@
 ---
 
 ## 1. Giới thiệu
-Dự án xây dựng công cụ phân tích **Mạng Petri 1-safe** (1-safe Petri nets) này được viết bằng ngôn ngữ C++ để tối ưu hóa hiệu năng và kết hợp các kỹ thuật:
+Dự án xây dựng công cụ phân tích **Mạng Petri 1-safe** (1-safe Petri nets) của nhóm được viết bằng ngôn ngữ C++ để tối ưu hóa hiệu năng và kết hợp các kỹ thuật:
 * **Explicit Search:** Duyệt không gian trạng thái bằng BFS.
 * **Symbolic Search:** Sử dụng BDD (Binary Decision Diagrams) để biểu diễn không gian trạng thái lớn.
 * **Deadlock Detection:** Phát hiện tắc nghẽn bằng quy hoạch tuyến tính (ILP).
@@ -54,21 +54,19 @@ Sau khi biên dịch thành công, file thực thi PetriNetApp sẽ xuất hiệ
 ./PetriNetApp simple_lbs-5.pnml
 ```
 ## 4. Các chức năng đã thực hiện trong dự án
-Task 1 - Parse PNML
+### Task 1 - Parse PNML
 
 Đọc file chuẩn PNML (Petri Net Markup Language).
 
 Xây dựng cấu trúc dữ liệu Petri Net (Places, Transitions, Arcs).
 
-Sử dụng thư viện tinyxml2
-
-Task 2 - Explicit Reachability:
+### Task 2 - Explicit Reachability
 
 Sử dụng thuật toán tìm kiếm theo chiều rộng (BFS).
 
 Liệt kê toàn bộ không gian trạng thái (Reachable Markings) từ trạng thái đầu.
 
-Task 3 - Symbolic Reachability:
+### Task 3 - Symbolic Reachability
 
 Mã hóa các trạng thái và hàm chuyển đổi bằng Binary Decision Diagrams (BDD).
 
@@ -76,7 +74,7 @@ Sử dụng thư viện BuDDy để tính toán tập trạng thái đạt đư�
 
 Báo cáo số lượng trạng thái, thời gian chạy và số node BDD sử dụng.
 
-Task 4 - Deadlock Detection:
+### Task 4 - Deadlock Detection
 
 Kết hợp tập trạng thái đạt được (từ BDD) và phương trình trạng thái (State Equation).
 
@@ -84,6 +82,6 @@ Sử dụng thư viện GLPK (Integer Linear Programming) để tìm kiếm dead
 
 Xuất ra một trạng thái Deadlock cụ thể nếu tìm thấy.
 
-Task 5 - Optimization:
+### Task 5 - Optimization
 
 Tìm trạng thái $M$ trong tập trạng thái đạt được sao cho hàm mục tiêu $c^T M$ là lớn nhất.Sử dụng thuật toán duyệt trên đồ thị BDD (Dynamic Programming) để tìm nghiệm tối ưu.
