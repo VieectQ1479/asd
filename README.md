@@ -25,8 +25,10 @@ Dự án xây dựng công cụ phân tích **Mạng Petri 1-safe** (1-safe Petr
 Dự án sử dụng **CMake** để quản lý quá trình biên dịch.
 
 > **⚠️ Lưu ý quan trọng:**
-> Mã nguồn dự án đã bao gồm sẵn mã nguồn thư viện **BuDDy** (trong thư mục `src/buddy/`) và thư viện **GLPK** (trong thư mục `src/GLPK/`). 
-> **Không đổi tên hoặc di chuyển** các thư mục này để đảm bảo cấu hình CMake hoạt động chính xác.
+> Mã nguồn dự án đã bao gồm sẵn mã nguồn thư viện **BuDDy** (trong thư mục `PetriNet/buddy/`), thư viện **GLPK** (trong thư mục `PetriNet/GLPK/`). 
+> **Không đổi tên hay di chuyển** các thư mục này để đảm bảo cấu hình CMake hoạt động chính xác.
+
+> Để sử dụng thêm các file pnml khác ngoài các file đã có sẵn hãy đảm bảo các file đó đã nằm trong thư mục `PetriNet/Test PNML files/`. Và thay đổi tên file trong bước chạy chương trình thành tên file tương ứng.
 
 ## 3. Hướng dẫn biên dịch (Build Instructions)
 
